@@ -1,3 +1,4 @@
+import { useData } from "../../hooks/useData.ts";
 import StateSwitcher from "./ui/StateSwitcher.tsx";
 
 type Props = {
@@ -5,9 +6,12 @@ type Props = {
   name: string;
   description: string;
   isActive: boolean;
+  id: number;
 }
 
-const ExtensionCard = ({ logo, name, description, isActive }: Props) => {
+const ExtensionCard = ({ logo, name, description, isActive, id }: Props) => {
+  const { deleteExtension } = useData();
+
   return (
     <div className="bg-neutral dark:bg-neutral-800 shadow-xl flex flex-col justify-between p-4 py-5 rounded-2xl gap-8">
       <div className="flex items-start gap-4">
@@ -18,8 +22,8 @@ const ExtensionCard = ({ logo, name, description, isActive }: Props) => {
         </div>
       </div>
       <div className="flex justify-between items-center">
-        <button className="rounded-xl border border-neutral-300 px-3 py-1 cursor-pointer text-[.9rem] dark:text-neutral hover:bg-red-500 hover:text-neutral dark:hover:text-neutral-800 transition-all duration-75 focus:outline focus:outline-red-500 focus:outline-offset-2">Remove</button>
-        <StateSwitcher isActive={isActive} />
+        <button className="rounded-xl border border-neutral-300 px-3 py-1 cursor-pointer text-[.9rem] dark:text-neutral hover:bg-red-500 hover:text-neutral dark:hover:text-neutral-800 transition-all duration-75 focus:outline focus:outline-red-500 focus:outline-offset-2" onClick={() => deleteExtension(id)}>Remove</button>
+        <StateSwitcher isActive={isActive} id={id} />
       </div>
     </div>
   )

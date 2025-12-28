@@ -31,8 +31,6 @@ export default function DataProvider({ children }: { children: React.ReactNode }
     return true;
   });
 
-  console.log(filteredExtensions);
-
   const value = {
     data: filteredExtensions, deleteExtension, changeExtensionState, setFilter
   }

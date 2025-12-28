@@ -8,7 +8,7 @@ const ExtensionsList = () => {
     <div className="grid grid-cols-3 gap-3">
       {
         data.map(({ name, logo, isActive, description }, index) => (
-          <ExtensionCard name={name} logo={logo} isActive={isActive} description={description} key={index} />
+          <ExtensionCard name={name} logo={logo} isActive={isActive} description={description} key={index} id={index} />
         ))
       }
     </div>
