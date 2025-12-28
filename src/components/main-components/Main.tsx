@@ -16,7 +16,7 @@ const Main = () => {
 
   return (
     <main className="flex flex-col gap-5">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
         <h1 className="text-3xl font-bold dark:text-neutral">Extensions List</h1>
         <div className="flex gap-4">
           {
