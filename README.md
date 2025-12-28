@@ -5,3 +5,4 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
 ## Author
 
 - Frontend Mentor - [@TrEv0rRrRr](https://www.frontendmentor.io/profile/TrEv0rRrRr)
+- The deployed website - [Click here](https://browser-extensions-frontendmentor.netlify.app)
